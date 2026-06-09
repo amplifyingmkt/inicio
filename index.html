@@ -140,6 +140,8 @@
 }
 </script>
 
+<link rel="icon" href="imagens/logo-1.png" type="image/png">
+
 <!-- PRELOAD CRÍTICO — vídeo hero tem prioridade máxima -->
 <link rel="preload" href="videos/video-hero-section2.mp4" as="video" type="video/mp4" fetchpriority="high">
 <link rel="preload" href="imagens/logo-1.png" as="image" fetchpriority="high">
@@ -166,7 +168,7 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; overflow-x: hidden; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); }
 
   /* SCROLLBAR */
   ::-webkit-scrollbar { width: 4px; }
@@ -192,9 +194,10 @@
   .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1.5px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
   .nav-links a:hover { color: var(--white); }
   .nav-links a:hover::after { transform: scaleX(1); }
-  .nav-cta { background: var(--orange) !important; color: var(--black) !important; padding: 0.55rem 1.4rem; border-radius: 4px; font-weight: 700 !important; }
-  .nav-cta:hover { background: var(--orange-light) !important; }
-  .nav-cta::after { display: none !important; }
+  .nav-cta { background: var(--orange); color: var(--black); padding: 0.55rem 1.4rem; border-radius: 4px; font-weight: 700; }
+  .nav-cta:hover { background: var(--orange-light); color: var(--black); }
+  .nav-links a.nav-cta { color: var(--black); }
+  .nav-links a.nav-cta::after { display: none; }
   .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
@@ -393,7 +396,6 @@
     pointer-events: none;
     letter-spacing: 2px;
   }
-  .modal-left-top {}
   .modal-left-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.1rem;
@@ -597,6 +599,10 @@
     .wa-btn { padding: 0.85rem; border-radius: 50%; bottom: 1.5rem; right: 1.5rem; }
     .wa-pulse { bottom: 1.5rem; right: 1.5rem; }
   }
+  /* QS VIDEO — menor no desktop (~40% menor) */
+  @media (min-width: 769px) {
+    .qs-img { max-width: 60%; margin: 0 auto; }
+  }
 
   /* PERFORMANCE */
   /* Prioriza compositing do vídeo hero no GPU */
@@ -614,6 +620,13 @@
 </head>
 <body>
 
+<!-- SVG SYMBOLS — ícones reutilizáveis, evita repetição inline -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </symbol>
+</svg>
+
 <!-- NAV -->
 <nav id="navbar" aria-label="Navegação principal">
   <a href="#" class="nav-logo" aria-label="Amplifying – Início">
@@ -621,9 +634,9 @@
     AMPLIFYING
   </a>
   <ul class="nav-links" id="navLinks">
+    <li><a href="#quem-somos">O que fazemos</a></li>
     <li><a href="#canais">Meta &amp; Google</a></li>
     <li><a href="#como-funciona">Como Funciona</a></li>
-    <li><a href="#quem-somos">Quem Somos</a></li>
     <li><a href="servicos.html" style="color:var(--blue-light);">Design &amp; Sites →</a></li>
     <li><a href="https://wa.me/5548999897492?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20sobre%20tr%C3%A1fego%20pago!" target="_blank" rel="noopener noreferrer" class="nav-cta">Fale Conosco</a></li>
   </ul>
@@ -649,10 +662,10 @@
       Cuidamos dos seus anúncios no Meta e no Google do começo ao fim. Você foca no seu negócio, a gente cuida de fazer as campanhas performarem.
     </p>
     <div class="hero-btns">
-      <a href="javascript:void(0)" onclick="openModal()" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <button onclick="openModal()" class="btn-primary">
+        <svg width="18" height="18" fill="currentColor" aria-hidden="true" style="flex-shrink:0;"><use href="#icon-whatsapp"/></svg>
         Quero conversar sobre o meu negócio
-      </a>
+      </button>
       <a href="#como-funciona" class="btn-secondary">Como funciona esse serviço?</a>
     </div>
   </div>
@@ -841,9 +854,9 @@
     <p class="cta-sub">É gratuito e leva uns 20 minutos. A gente entende o seu momento e vê se faz sentido trabalhar juntos. Se não fizer, seremos os primeiros a comunicar isso!</p>
     <p class="cta-sub" style="margin-top:-0.5rem;font-size:0.88rem;color:rgba(245,245,245,0.4);">Ou se preferir só tirar uma dúvida antes, fale direto pelo WhatsApp.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
-      <a href="javascript:void(0)" onclick="openModal()" class="btn-primary" style="font-size:1rem;padding:1.2rem 3rem;">Quero um diagnóstico gratuito</a>
+      <button onclick="openModal()" class="btn-primary" style="font-size:1rem;padding:1.2rem 3rem;">Quero um diagnóstico gratuito</button>
       <a href="https://wa.me/5548999897492?text=Oi%2C%20vim%20pelo%20site%20e%20queria%20uma%20consultoria%20e%20direcionamento%20sobre%20tr%C3%A1fego%20pago!" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size:1rem;padding:1.2rem 2.5rem;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
         Consultoria e Direcionamento
       </a>
     </div>
@@ -870,14 +883,14 @@
 </footer>
 
 <!-- MODAL DIAGNÓSTICO -->
-<div class="modal-overlay" id="diagModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-overlay" id="diagModal" role="dialog" aria-modal="true" aria-labelledby="modalDialogTitle">
   <div class="modal-box">
 
     <!-- PAINEL ESQUERDO -->
     <div class="modal-left">
       <div class="modal-left-top">
         <div class="modal-left-logo"><div class="modal-left-logo-dot"></div> AMPLIFYING</div>
-        <div class="modal-left-title">DIAGNÓSTICO<br><span>GRATUITO</span></div>
+        <div class="modal-left-title" id="modalDialogTitle">DIAGNÓSTICO<br><span>GRATUITO</span></div>
         <p class="modal-left-sub">Leva 3 minutos. Vamos entender o seu negócio antes de qualquer proposta.</p>
       </div>
       <div class="modal-steps-nav" id="modalStepsNav">
@@ -915,16 +928,16 @@
             <div class="modal-step-body">
               <div>
                 <div class="modal-tag">Passo 1</div>
-                <h2 class="modal-title" id="modalTitle">CONTA DO<br><span style="color:var(--orange)">SEU NEGÓCIO.</span></h2>
+                <h2 class="modal-title">CONTA DO<br><span style="color:var(--orange)">SEU NEGÓCIO.</span></h2>
                 <p class="modal-sub">Como posso te chamar e o que você faz?</p>
               </div>
               <div class="form-group">
                 <label class="form-label" for="d-nome">Seu nome <span>*</span></label>
-                <input class="form-input" type="text" id="d-nome" placeholder="Como posso te chamar?" autocomplete="given-name">
+                <input class="form-input" type="text" id="d-nome" placeholder="Como posso te chamar?" autocomplete="given-name" maxlength="80">
               </div>
               <div class="form-group">
                 <label class="form-label" for="d-negocio">O que seu negócio faz? <span>*</span></label>
-                <input class="form-input" type="text" id="d-negocio" placeholder="Ex: clínica odontológica, loja de roupas…">
+                <input class="form-input" type="text" id="d-negocio" placeholder="Ex: clínica odontológica, loja de roupas…" maxlength="120">
               </div>
               <div class="form-group">
                 <label class="form-label" for="d-tempo">Há quanto tempo está no mercado?</label>
@@ -954,22 +967,22 @@
               <div class="form-group">
                 <label class="form-label">Já anuncia hoje? <span>*</span></label>
                 <div class="form-chips" id="chips-anuncio">
-                  <button class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Nunca anunciei</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Já tentei e parei</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Anuncio por conta própria</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Tenho / tive agência</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Nunca anunciei</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Já tentei e parei</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Anuncio por conta própria</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-anuncio')">Tenho / tive agência</button>
                 </div>
               </div>
               <div class="form-row-2">
                 <div class="form-group">
                   <label class="form-label">Principal canal de vendas hoje?</label>
                   <div class="form-chips" id="chips-canal">
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Indicação</button>
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Instagram orgânico</button>
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Google orgânico</button>
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Anúncios pagos</button>
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Loja física</button>
-                    <button class="form-chip" onclick="toggleChip(this,'chips-canal')">Marketplace</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Indicação</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Instagram orgânico</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Google orgânico</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Anúncios pagos</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Loja física</button>
+                    <button type="button" class="form-chip" onclick="toggleChip(this,'chips-canal')">Marketplace</button>
                   </div>
                 </div>
                 <div class="form-group">
@@ -1004,11 +1017,11 @@
               <div class="form-group">
                 <label class="form-label">O que mais te incomoda hoje? <span>*</span></label>
                 <div class="form-chips" id="chips-dor">
-                  <button class="form-chip" onclick="toggleChip(this,'chips-dor')">Pouco volume de clientes</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-dor')">Clientes que não convertem</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-dor')">Dependência de indicação</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-dor')">Já anuncio mas não vejo retorno</button>
-                  <button class="form-chip" onclick="toggleChip(this,'chips-dor')">Quero escalar o que já funciona</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-dor')">Pouco volume de clientes</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-dor')">Clientes que não convertem</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-dor')">Dependência de indicação</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-dor')">Já anuncio mas não vejo retorno</button>
+                  <button type="button" class="form-chip" onclick="toggleChip(this,'chips-dor')">Quero escalar o que já funciona</button>
                 </div>
               </div>
               <div class="form-group">
@@ -1041,18 +1054,18 @@
               </div>
               <div class="form-group">
                 <label class="form-label" for="d-obs">Contexto extra (opcional)</label>
-                <textarea class="form-textarea" id="d-obs" placeholder="Ex: já tentei anunciar antes e gastei X sem resultado, meu público é…"></textarea>
+                <textarea class="form-textarea" id="d-obs" placeholder="Ex: já tentei anunciar antes e gastei X sem resultado, meu público é…" maxlength="400"></textarea>
               </div>
               <div class="form-group">
                 <label class="form-label" for="d-whats">Seu WhatsApp <span>*</span></label>
-                <input class="form-input" type="tel" id="d-whats" placeholder="(XX) XXXXX-XXXX" autocomplete="tel">
+                <input class="form-input" type="tel" id="d-whats" placeholder="(XX) XXXXX-XXXX" autocomplete="tel" maxlength="20">
               </div>
             </div>
             <div class="modal-footer">
               <button class="modal-btn-back" onclick="goStep(3)">← Voltar</button>
               <span class="modal-step-counter">4 / 4</span>
               <button class="modal-btn-next" id="btnEnviar" onclick="enviarDiagnostico()">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <svg width="15" height="15" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
                 Enviar pelo WhatsApp
               </button>
             </div>
@@ -1084,9 +1097,7 @@
    target="_blank"
    rel="noopener noreferrer"
    aria-label="Falar com a Amplifying no WhatsApp">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
+  <svg width="22" height="22" fill="currentColor" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
   <span>Fale Conosco</span>
 </a>
 
@@ -1134,9 +1145,9 @@
   }
 
   function openModal() {
-    // Restaura para o step salvo (se houver), senão começa do 1
-    slideToStep(currentStep);
-    buildProgress();
+    // If previously completed (step 5), reset to start fresh
+    if (currentStep === 5) resetModal();
+    else { slideToStep(currentStep); buildProgress(); }
     document.getElementById('diagModal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -1144,6 +1155,12 @@
   function closeModal() {
     document.getElementById('diagModal').classList.remove('open');
     document.body.style.overflow = '';
+  }
+
+  function resetModal() {
+    currentStep = 1;
+    slideToStep(1);
+    buildProgress();
   }
 
   function slideToStep(n) {
@@ -1233,6 +1250,7 @@
     const whats     = document.getElementById('d-whats').value.trim();
     const msg = `Oi! Preenchi o formulário de diagnóstico no site. Seguem as informações:\n\n*Nome:* ${nome}\n*Negócio:* ${negocio}\n*Tempo no mercado:* ${tempo}\n\n*Situação atual:*\n• Anuncia hoje: ${anuncio}\n• Principal canal de vendas: ${canal}\n• Ticket médio: ${ticket}\n\n*Objetivo:*\n• Principal dor: ${dor}\n• Orçamento mensal em anúncios: ${orcamento}\n\n*Contexto extra:* ${obs}\n*Meu WhatsApp:* ${whats}`;
     window.open(`https://wa.me/5548999897492?text=${encodeURIComponent(msg)}`, '_blank');
+    sessionStorage.removeItem(SS_KEY);
     goStep(5);
   }
 
@@ -1292,13 +1310,6 @@
     const group = document.getElementById(gid);
     if (group) group.addEventListener('click', () => setTimeout(saveForm, 0));
   });
-
-  // Limpa o sessionStorage ao enviar com sucesso
-  const _origEnviar = enviarDiagnostico;
-  enviarDiagnostico = function() {
-    _origEnviar();
-    if (currentStep === 5) sessionStorage.removeItem(SS_KEY);
-  };
 
   // Restaura ao carregar a página
   restoreForm();
