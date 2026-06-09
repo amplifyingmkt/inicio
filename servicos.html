@@ -3,8 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amplifying – Site, Bio Site & Presença Digital</title>
-<link rel="dns-prefetch" href="https://wa.me">
+
+<!-- SEO PRIMARY -->
+<title>Amplifying | Sites, Bio Site & Design – Presença Digital Profissional</title>
+<meta name="description" content="Criação de sites profissionais, bio sites personalizados, identidade visual, design para redes sociais, media kit e materiais de impressão. Sua marca com presença digital de verdade.">
+<meta name="keywords" content="criação de site profissional, bio site personalizado, identidade visual, design para redes sociais, media kit, materiais impressão, agência design digital, presença digital">
+<meta name="author" content="Amplifying">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://amplifyingmkt.com.br/servicos.html">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Amplifying">
+<meta property="og:title" content="Amplifying | Sites, Bio Site & Design – Presença Digital Profissional">
+<meta property="og:description" content="Sites profissionais, bio sites exclusivos, identidade visual e design que fazem sua marca ser lembrada. Tudo personalizado, sem template.">
+<meta property="og:url" content="https://amplifyingmkt.com.br/servicos.html">
+<meta property="og:image" content="https://amplifyingmkt.com.br/imagens/og-cover-servicos.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amplifying | Sites, Bio Site & Design – Presença Digital Profissional">
+<meta name="twitter:description" content="Criação de sites, bio sites, identidade visual e design para redes. Presença digital profissional e personalizada para o seu negócio.">
+<meta name="twitter:image" content="https://amplifyingmkt.com.br/imagens/og-cover-servicos.jpg">
+
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Amplifying",
+  "description": "Agência de design e presença digital especializada em criação de sites, bio sites, identidade visual, design para redes sociais, media kit e materiais de impressão.",
+  "url": "https://amplifyingmkt.com.br/servicos.html",
+  "logo": "https://amplifyingmkt.com.br/imagens/logo-1.png",
+  "image": "https://amplifyingmkt.com.br/imagens/og-cover-servicos.jpg",
+  "telephone": "+55-48-99989-7492",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-48-99989-7492",
+    "contactType": "customer service",
+    "availableLanguage": "Portuguese"
+  },
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "serviceType": [
+    "Criação de Site",
+    "Bio Site Personalizado",
+    "Landing Page",
+    "Identidade Visual",
+    "Design para Redes Sociais",
+    "Media Kit",
+    "Materiais para Impressão",
+    "Social Media"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de Design & Presença Digital",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Criação de Site Profissional",
+          "description": "Sites institucionais, bio sites e landing pages com design exclusivo, rápidos e otimizados para converter visitantes em clientes."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Identidade Visual",
+          "description": "Logotipo, marca d'água e foto de perfil para redes sociais. Marca forte e autêntica que expressa os ideais do seu negócio."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Design para Redes Sociais",
+          "description": "Posts, stories e artes visuais personalizadas para Instagram e Google Business Profile que param o scroll e comunicam a essência da sua marca."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Media Kit",
+          "description": "Apresentação profissional da sua marca para fechar parcerias. Material 100% personalizado em PDF para influencers e músicos."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Materiais para Impressão",
+          "description": "Cartões de visita, flyers, cardápios, vouchers e banners com design profissional que reforçam a identidade da sua marca no mundo físico."
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- PRELOAD CRÍTICO -->
+<link rel="preload" href="videos/video-hero-section.mp4" as="video" type="video/mp4" fetchpriority="high">
+<link rel="preload" href="imagens/logo-1.png" as="image" fetchpriority="high">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,17 +148,15 @@
   .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.15) 100%); z-index: 1; }
   .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%); z-index: 2; }
-  .hero-content { position: relative; z-index: 3; max-width: 720px; width: 100%; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,107,255,0.12); border: 1px solid rgba(26,107,255,0.35); color: var(--blue-light); font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 0.45rem 1rem; border-radius: 2px; margin-bottom: 2rem; animation: fadeUp 0.8s ease both; }
-  .hero-tag-dot { width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; animation: pulse 1.5s infinite; }
-  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.92; letter-spacing: 2px; margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.15s ease both; }
+  .hero-content { position: relative; z-index: 3; max-width: 720px; width: 100%; padding-top: 1rem; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4.8rem, 10.5vw, 9.5rem); line-height: 0.92; letter-spacing: 2px; margin-bottom: 1.5rem; animation: fadeUp 0.8s ease both; }
   .hero-title .accent { color: var(--orange); }
   .hero-title .blue { color: var(--blue-light); }
-  .hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(245,245,245,0.65); line-height: 1.75; max-width: 500px; margin-bottom: 2.8rem; animation: fadeUp 0.8s 0.3s ease both; }
-  .hero-btns { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; animation: fadeUp 0.8s 0.45s ease both; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box; }
+  .hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(245,245,245,0.65); line-height: 1.75; max-width: 500px; margin-bottom: 2.8rem; animation: fadeUp 0.8s 0.15s ease both; }
+  .hero-btns { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; animation: fadeUp 0.8s 0.3s ease both; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box; }
   .hero-btns .btn-primary, .hero-btns .btn-secondary { flex: 1; justify-content: center; min-width: 0; }
 
-  .hero-stats { display: flex; align-items: stretch; margin-top: 3.5rem; animation: fadeUp 0.8s 0.6s ease both; background: rgba(10,10,10,0.45); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; }
+  .hero-stats { display: flex; align-items: stretch; margin-top: 3.5rem; animation: fadeUp 0.8s 0.45s ease both; background: rgba(10,10,10,0.45); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; }
   .hero-stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem 1rem; position: relative; transition: background 0.3s; }
   .hero-stat-item:hover { background: rgba(255,255,255,0.04); }
   .hero-stat-item + .hero-stat-item::before { content: ''; position: absolute; left: 0; top: 20%; height: 60%; width: 1px; background: rgba(255,255,255,0.1); }
@@ -64,7 +166,6 @@
   .btn-primary { background: var(--blue); color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
   .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(26,107,255,0.35); }
   .btn-full { display:flex; width:100%; max-width:100%; box-sizing:border-box; justify-content:center; margin-bottom:1.2rem; overflow:hidden; }
-  .btn-primary[style*="background:var(--blue)"]:hover { background: var(--blue-light) !important; box-shadow: 0 12px 30px rgba(26,107,255,0.35); }
   .btn-secondary { background: transparent; color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; border: 1px solid var(--border); text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
   .btn-secondary:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
 
@@ -90,7 +191,6 @@
   .prop-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 2.5rem; }
   .prop-card { background: var(--black); border: 1px solid rgba(255,94,0,0.2); border-top: 2px solid var(--orange); border-radius: 6px; padding: 0.85rem 0.75rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; cursor: default; }
   .prop-card:hover { border-color: rgba(255,94,0,0.6); box-shadow: 0 8px 28px rgba(255,94,0,0.12); transform: translateY(-3px); }
-  .prop-card-icon { display: none; }
   .prop-card-text { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.55; text-align: center; }
 
   #servicos { background: var(--black); }
@@ -117,9 +217,9 @@
 
   .bio-visual-mobile { display: none; }
   .bio-visual-desktop { display: flex; }
-  .bio-hero-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; }
+  .bio-hero-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
   .bio-content { padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
-  .bio-visual { background: var(--dark2); border-left: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; min-height: 420px; }
+  .bio-visual { background: var(--dark2); border-left: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; min-height: 320px; }
   .bio-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(26,107,255,0.1) 0%, transparent 70%); }
   .phone-wrap { position: relative; z-index: 1; }
   .phone { width: 190px; aspect-ratio: 9/18; background: var(--dark); border: 2px solid rgba(255,255,255,0.1); border-radius: 28px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
@@ -134,7 +234,7 @@
   .phone-slider-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; transition: background 0.3s, transform 0.3s; }
   .phone-slider-dot.active { background: var(--orange); transform: scale(1.3); }
 
-  .site-video-card { width: 100%; max-width: 480px; background: var(--dark2); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); transition: border-color 0.3s, transform 0.3s; }
+  .site-video-card { width: 100%; max-width: 240px; background: var(--dark2); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); transition: border-color 0.3s, transform 0.3s; }
   .site-video-card:hover { border-color: rgba(26,107,255,0.35); transform: translateY(-4px); }
   .site-video-wrap { position: relative; width: 100%; aspect-ratio: 9/16; overflow: hidden; }
   .site-video-wrap .phone-slide-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease; }
@@ -158,7 +258,7 @@
   .id-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
 
   #design-redes { background: var(--dark); }
-  .redes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; }
+  .redes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin-top: 3rem; max-width: 460px; margin-left: auto; margin-right: auto; }
   .redes-post { aspect-ratio: 4/5; background: var(--dark2); border: 1px solid var(--border); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.15); font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; overflow: hidden; position: relative; }
   .redes-post video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .redes-post::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,94,0,0.05) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s; }
@@ -263,68 +363,25 @@
   .mock-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; cursor: pointer; padding: 0; transition: background 0.3s, transform 0.3s; }
   .mock-dot.active { background: var(--orange); transform: scale(1.3); }
 
+  /* ── Materiais para Impressão: layout desktop ── */
+  .mat-inner { display: flex; flex-direction: column; gap: 2.5rem; }
+  .mat-top-row { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3.5rem; align-items: center; }
+  .mat-texto-top { display: flex; flex-direction: column; justify-content: center; }
+  .mat-carrossel .mock-slider { aspect-ratio: 2560/1440; }
+  .mat-btn { width: 100%; }
+
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--black); }
   ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
 
   /* ══════════════════════════════════════
-     INVERSÃO LARANJA → AZUL (toda a página exceto hero e nav)
-     Azul sólido é o dominante; laranja vira detalhes pontuais
+     TEMA AZUL — overrides pontuais (laranja como detalhe)
   ══════════════════════════════════════ */
 
-  /* Scrollbar thumb */
-
   /* section-tag e a linha antes dela */
-  #servicos .section-tag,
-  #quem-somos .section-tag,
-  #criacao-site .section-tag,
-  #id-visual .section-tag,
-  #social-media .section-tag,
-  #design-redes .section-tag,
-  #media-kit .section-tag,
-  #materiais-impressao .section-tag,
-  #feedbacks .section-tag,
-  #cta-final .section-tag { color: var(--blue); }
+  /* section-tag e linha: azul (já é o default via .section-tag) */
 
-  #servicos .section-tag::before,
-  #quem-somos .section-tag::before,
-  #criacao-site .section-tag::before,
-  #id-visual .section-tag::before,
-  #social-media .section-tag::before,
-  #design-redes .section-tag::before,
-  #media-kit .section-tag::before,
-  #materiais-impressao .section-tag::before,
-  #feedbacks .section-tag::before,
-  #cta-final .section-tag::before { background: var(--blue); }
-
-  /* Botão primário → azul em todas as seções (exceto hero) */
-  #quem-somos .btn-primary,
-  #servicos .btn-primary,
-  #criacao-site .btn-primary,
-  #id-visual .btn-primary,
-  #social-media .btn-primary,
-  #design-redes .btn-primary,
-  #media-kit .btn-primary,
-  #materiais-impressao .btn-primary,
-  #feedbacks .btn-primary,
-  #cta-final .btn-primary {
-    background: var(--blue) !important;
-    color: var(--white) !important;
-    box-shadow: none;
-  }
-  #quem-somos .btn-primary:hover,
-  #servicos .btn-primary:hover,
-  #criacao-site .btn-primary:hover,
-  #id-visual .btn-primary:hover,
-  #social-media .btn-primary:hover,
-  #design-redes .btn-primary:hover,
-  #media-kit .btn-primary:hover,
-  #materiais-impressao .btn-primary:hover,
-  #feedbacks .btn-primary:hover,
-  #cta-final .btn-primary:hover {
-    background: var(--blue-light) !important;
-    box-shadow: 0 12px 30px rgba(26,107,255,0.35) !important;
-  }
+  /* btn-primary: azul e hover azul claro (já são o default via .btn-primary) */
 
   /* Segundo botão em pares → transparente com borda azul */
   .bio-btns-wrap a.btn-primary:nth-child(2),
@@ -343,17 +400,8 @@
     border-color: rgba(26,107,255,0.7) !important;
   }
 
-  /* CTA final: btn-secondary vira azul transparente */
-  #cta-final .btn-secondary {
-    border-color: rgba(26,107,255,0.45) !important;
-  }
-  #cta-final .btn-secondary:hover {
-    border-color: var(--blue-light) !important;
-    background: rgba(26,107,255,0.08) !important;
-  }
 
-  /* Accent nos títulos (var(--orange) inline) — ex: "AMPLIFICAR" no CTA */
-  .cta-title .accent { color: var(--blue-light); }
+
 
   /* Dor cards: borda e hover → azul */
   .dor-card { border-left-color: var(--blue) !important; }
@@ -436,7 +484,7 @@
     .btn-full { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding-left: 1rem !important; padding-right: 1rem !important; }
     .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--dark); padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
     .hamburger { display: flex; }
-    .redes-grid { grid-template-columns: 1fr 1fr; }
+    .redes-grid { grid-template-columns: 1fr 1fr; max-width: 100%; }
     footer { flex-direction: column; text-align: center; }
     .bio-content { padding: 3rem 2rem; }
 
@@ -547,6 +595,8 @@
     .mk-feats-wrap { order: 3; }
 
     /* ── MATERIAIS PARA IMPRESSÃO ── */
+    .mat-top-row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .mat-texto-top { text-align: center; }
     .mat-btn .btn-primary { width: 100% !important; box-sizing: border-box !important; justify-content: center; display: flex !important; }
 
     /* ── CAROUSEL ── */
@@ -603,10 +653,9 @@
       text-align: center !important;
       white-space: normal !important;
     }
-    .redes-grid { grid-template-columns: 1fr; }
+    .redes-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
     #social-media > div > div:last-child { grid-template-columns: 1fr; }
     .sm-cards { grid-template-columns: 1fr !important; }
-    .hero-tag { font-size: 0.62rem; letter-spacing: 2px; }
   }
 
   /* ── WHATSAPP ── */
@@ -825,7 +874,6 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-tag"><span class="hero-tag-dot"></span>Site & Bio site · Presença Digital · Criativos que Convertem</div>
     <h1 class="hero-title">
       SUA MARCA<br>
       FALA <span class="accent">ANTES</span><br>
@@ -1242,36 +1290,41 @@
 
 <!-- MATERIAIS PARA IMPRESSÃO -->
 <section id="materiais-impressao" style="background:var(--dark);overflow-x:hidden;">
-  <div style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
-    <div class="mat-texto-top reveal" style="width:100%;text-align:center;">
-      <h2 class="section-title" style="white-space:normal;">MATERIAIS PARA<br><span style="color:var(--blue-light)">IMPRESSÃO!</span></h2>
-    </div>
-    <div class="mat-carrossel reveal" style="width:100%;">
-      <div class="mock-slider">
-        <div class="mock-track" id="mockTrack">
-          <div class="mock-slide"><img src="imagens/mock-1.png" alt="Mock 1" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cartao-1.png" alt="Cartão 1" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cardapio-1.png" alt="Cardápio 1" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/voucher-1.png" alt="Voucher 1" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/mock-2.png" alt="Mock 2" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cartao-2.png" alt="Cartão 2" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cardapio-2.png" alt="Cardápio 2" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/voucher-2.png" alt="Voucher 2" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/mock-3.png" alt="Mock 3" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cartao-3.png" alt="Cartão 3" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/cardapio-3.png" alt="Cardápio 3" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/voucher-3.png" alt="Voucher 3" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/mock-4.png" alt="Mock 4" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/banner-1.png" alt="Banner 1" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/voucher-4.png" alt="Voucher 4" loading="lazy" decoding="async"></div>
-          <div class="mock-slide"><img src="imagens/mock-5.png" alt="Mock 5" loading="lazy" decoding="async"></div>
+  <div class="mat-inner">
+    <!-- Linha superior: texto + slider lado a lado no desktop -->
+    <div class="mat-top-row">
+      <div class="mat-texto-top reveal">
+        <h2 class="section-title" style="white-space:normal;">MATERIAIS PARA<br><span style="color:var(--blue-light)">IMPRESSÃO!</span></h2>
+        <p class="section-body" style="margin-top:1.2rem;">Cartões de visita, flyers, cardápios, vouchers, banners e muito mais — materiais físicos com design profissional que reforçam a identidade da sua marca no mundo real.</p>
+      </div>
+      <div class="mat-carrossel reveal">
+        <div class="mock-slider">
+          <div class="mock-track" id="mockTrack">
+            <div class="mock-slide"><img src="imagens/mock-1.png" alt="Mock 1" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cartao-1.png" alt="Cartão 1" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cardapio-1.png" alt="Cardápio 1" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/voucher-1.png" alt="Voucher 1" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/mock-2.png" alt="Mock 2" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cartao-2.png" alt="Cartão 2" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cardapio-2.png" alt="Cardápio 2" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/voucher-2.png" alt="Voucher 2" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/mock-3.png" alt="Mock 3" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cartao-3.png" alt="Cartão 3" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/cardapio-3.png" alt="Cardápio 3" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/voucher-3.png" alt="Voucher 3" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/mock-4.png" alt="Mock 4" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/banner-1.png" alt="Banner 1" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/voucher-4.png" alt="Voucher 4" loading="lazy" decoding="async"></div>
+            <div class="mock-slide"><img src="imagens/mock-5.png" alt="Mock 5" loading="lazy" decoding="async"></div>
+          </div>
+          <button class="mock-btn mock-btn-prev" onclick="mockSlide(-1)">&#8592;</button>
+          <button class="mock-btn mock-btn-next" onclick="mockSlide(1)">&#8594;</button>
+          <div class="mock-dots" id="mockDots"></div>
         </div>
-        <button class="mock-btn mock-btn-prev" onclick="mockSlide(-1)">&#8592;</button>
-        <button class="mock-btn mock-btn-next" onclick="mockSlide(1)">&#8594;</button>
-        <div class="mock-dots" id="mockDots"></div>
       </div>
     </div>
-    <div class="mat-btn reveal" style="width:100%;">
+    <!-- Botão abaixo dos dois -->
+    <div class="mat-btn reveal">
       <a href="https://wa.me/5548999897492?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener noreferrer" class="btn-primary btn-full" style="background:var(--blue);">Solicitar Orçamento Agora Mesmo →</a>
     </div>
   </div>
