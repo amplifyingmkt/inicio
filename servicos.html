@@ -28,6 +28,9 @@
 <meta name="twitter:title" content="Amplifying | Sites, Bio Site & Design – Presença Digital Profissional">
 <meta name="twitter:description" content="Criação de sites, bio sites, identidade visual e design para redes. Presença digital profissional e personalizada para o seu negócio.">
 <meta name="twitter:image" content="https://amplifyingmkt.com.br/imagens/og-cover-servicos.jpg">
+<meta name="twitter:image:alt" content="Amplifying – Agência de Design e Presença Digital">
+<meta name="twitter:site" content="@amplifyingmkt">
+<meta property="og:image:alt" content="Amplifying – Agência de Design e Presença Digital">
 
 <!-- SCHEMA.ORG -->
 <script type="application/ld+json">
@@ -39,10 +42,10 @@
   "url": "https://amplifyingmkt.com.br/servicos.html",
   "logo": "https://amplifyingmkt.com.br/imagens/logo-1.png",
   "image": "https://amplifyingmkt.com.br/imagens/og-cover-servicos.jpg",
-  "telephone": "+55-48-99989-7492",
+  "telephone": "+5548999897492",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+55-48-99989-7492",
+    "telephone": "+5548999897492",
     "contactType": "customer service",
     "availableLanguage": "Portuguese"
   },
@@ -106,6 +109,15 @@
 }
 </script>
 
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="imagens/logo-1.png">
+<link rel="apple-touch-icon" href="imagens/logo-1.png">
+
+<!-- SEGURANÇA -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <!-- PRELOAD CRÍTICO -->
 <link rel="preload" href="videos/video-hero-section.mp4" as="video" type="video/mp4" fetchpriority="high">
 <link rel="preload" href="imagens/logo-1.png" as="image" fetchpriority="high">
@@ -154,23 +166,27 @@
   .hero-title .blue { color: var(--blue-light); }
   .hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(245,245,245,0.65); line-height: 1.75; max-width: 500px; margin-bottom: 2.8rem; animation: fadeUp 0.8s 0.15s ease both; }
   .hero-btns { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; animation: fadeUp 0.8s 0.3s ease both; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box; }
-  .hero-btns .btn-primary, .hero-btns .btn-secondary { flex: 1; justify-content: center; min-width: 0; }
+  .hero-btns .btn-primary, .hero-btns .btn-secondary { flex: 1; justify-content: center; min-width: 0; white-space: nowrap; }
 
   .hero-stats { display: flex; align-items: stretch; margin-top: 3.5rem; animation: fadeUp 0.8s 0.45s ease both; background: rgba(10,10,10,0.45); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; }
   .hero-stat-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem 1rem; position: relative; transition: background 0.3s; }
   .hero-stat-item:hover { background: rgba(255,255,255,0.04); }
   .hero-stat-item + .hero-stat-item::before { content: ''; position: absolute; left: 0; top: 20%; height: 60%; width: 1px; background: rgba(255,255,255,0.1); }
   .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--white); letter-spacing: 2px; line-height: 1; display: block; }
-  .stat-label { font-size: 0.65rem; color: rgba(245,245,245,0.45); letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; display: block; font-family: 'Syne', sans-serif; font-weight: 600; }
+  .stat-label { font-size: 0.65rem; color: rgba(245,245,245,0.45); letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; display: block; font-family: 'Syne', sans-serif; font-weight: 600; white-space: nowrap; }
+  .stat-flags { display: flex; gap: 3px; justify-content: center; margin-top: 6px; }
+  .stat-flag { width: 16px; height: 12px; border-radius: 2px; overflow: hidden; display: inline-block; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
 
-  .btn-primary { background: var(--blue); color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+  .btn-primary { background: var(--blue); color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; text-decoration: none; transition: background 0.3s, transform 0.3s, box-shadow 0.3s; display: inline-flex; align-items: center; gap: 8px; }
   .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(26,107,255,0.35); }
-  .btn-full { display:flex; width:100%; max-width:100%; box-sizing:border-box; justify-content:center; margin-bottom:1.2rem; overflow:hidden; }
-  .btn-secondary { background: transparent; color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; border: 1px solid var(--border); text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn-full, .btn-secao { display:flex; width:100%; max-width:100%; box-sizing:border-box; justify-content:center; margin-bottom:1.2rem; overflow:hidden; }
+  .btn-secondary { background: transparent; color: var(--white); font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: 4px; border: 1px solid var(--border); text-decoration: none; transition: background 0.3s, border-color 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
   .btn-secondary:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
 
   .marquee-section { padding: 1.4rem 0; background: var(--blue); overflow: hidden; }
   .marquee-track { display: flex; gap: 0; white-space: nowrap; animation: marquee 28s linear infinite; }
+  .marquee-section:hover .marquee-track,
+  .marquee-section.paused .marquee-track { animation-play-state: paused; }
   .marquee-item { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 3px; color: var(--black); display: inline-flex; align-items: center; gap: 1.5rem; flex-shrink: 0; padding: 0 1.5rem; }
   .marquee-dot { width: 5px; height: 5px; background: rgba(0,0,0,0.35); border-radius: 50%; }
 
@@ -214,6 +230,66 @@
   .srv-tags .srv-tag:nth-child(3) { color: var(--blue-light); background: rgba(26,107,255,0.1); border-color: rgba(26,107,255,0.18); }
   .srv-arrow { display: inline-flex; align-items: center; gap: 5px; font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-top: 1.2rem; opacity: 0; transform: translateX(-8px); transition: opacity 0.3s, transform 0.3s; text-decoration: none; }
   .srv-card:hover .srv-arrow { opacity: 1; transform: translateX(0); }
+
+  /* ── SOCIAL MEDIA: cards refinados ── */
+  .sm-card {
+    position: relative;
+    padding: 2rem 1.6rem;
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: left;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+  .sm-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(.22,.68,0,1.2);
+  }
+  .sm-card--blue::after {
+    background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  }
+  .sm-card:hover { border-color: rgba(255,94,0,0.35); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(255,94,0,0.09); }
+  .sm-card--blue:hover { border-color: rgba(26,107,255,0.35); box-shadow: 0 16px 40px rgba(26,107,255,0.09); }
+  .sm-card:hover::after { transform: scaleX(1); }
+  .sm-card-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: rgba(255,255,255,0.07);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .sm-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .sm-card-desc {
+    font-size: 0.82rem;
+    color: rgba(245,245,245,0.5);
+    line-height: 1.7;
+  }
+
+  /* ── SOCIAL MEDIA: layout desktop ── */
+  .sm-inner { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+  .sm-inner .sm-texto-top { text-align: center; width: 100%; }
+  .sm-inner .sm-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; width: 100%; }
+  .sm-inner .sm-btn { width: 100%; }
+  .sm-inner .sm-btn .btn-primary { display: flex; width: 100%; box-sizing: border-box; justify-content: center; }
 
   .bio-visual-mobile { display: none; }
   .bio-visual-desktop { display: flex; }
@@ -259,7 +335,8 @@
 
   #design-redes { background: var(--dark); }
   .redes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin-top: 3rem; max-width: 460px; margin-left: auto; margin-right: auto; }
-  .redes-post { aspect-ratio: 4/5; background: var(--dark2); border: 1px solid var(--border); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.15); font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; overflow: hidden; position: relative; }
+  @media (min-width: 769px) { .redes-grid { grid-template-columns: repeat(4, 1fr); max-width: 100%; } }
+  .redes-post { aspect-ratio: 4/5; background: var(--dark2); border: 1px solid var(--border); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.15); font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; transition: border-color 0.3s, transform 0.3s; overflow: hidden; position: relative; }
   .redes-post video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .redes-post::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,94,0,0.05) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s; }
   .redes-post:hover { border-color: rgba(255,94,0,0.3); transform: translateY(-4px); }
@@ -345,8 +422,8 @@
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes dot-pulse { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(.7); } }
 
   .reveal { opacity: 0; transform: translateY(38px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -365,9 +442,10 @@
 
   /* ── Materiais para Impressão: layout desktop ── */
   .mat-inner { display: flex; flex-direction: column; gap: 2.5rem; }
-  .mat-top-row { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3.5rem; align-items: center; }
+  .mat-top-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
   .mat-texto-top { display: flex; flex-direction: column; justify-content: center; }
-  .mat-carrossel .mock-slider { aspect-ratio: 2560/1440; }
+  .mat-carrossel { display: flex; align-items: center; justify-content: center; }
+  .mat-carrossel .mock-slider { aspect-ratio: 2560/1440; width: 100%; }
   .mat-btn { width: 100%; }
 
   ::-webkit-scrollbar { width: 4px; }
@@ -377,11 +455,6 @@
   /* ══════════════════════════════════════
      TEMA AZUL — overrides pontuais (laranja como detalhe)
   ══════════════════════════════════════ */
-
-  /* section-tag e a linha antes dela */
-  /* section-tag e linha: azul (já é o default via .section-tag) */
-
-  /* btn-primary: azul e hover azul claro (já são o default via .btn-primary) */
 
   /* Segundo botão em pares → transparente com borda azul */
   .bio-btns-wrap a.btn-primary:nth-child(2),
@@ -400,13 +473,6 @@
     border-color: rgba(26,107,255,0.7) !important;
   }
 
-
-
-
-  /* Dor cards: borda e hover → azul */
-  .dor-card { border-left-color: var(--blue) !important; }
-  .dor-card:hover { border-color: rgba(26,107,255,0.5) !important; box-shadow: 0 8px 28px rgba(26,107,255,0.1) !important; }
-
   /* Prop-cards (Quem somos) */
   .prop-card { border-color: rgba(26,107,255,0.2) !important; border-top-color: var(--blue) !important; }
   .prop-card:hover { border-color: rgba(26,107,255,0.6) !important; box-shadow: 0 8px 28px rgba(26,107,255,0.12) !important; }
@@ -421,6 +487,10 @@
   .srv-tag:nth-child(2) { color: var(--orange) !important; background: rgba(255,94,0,0.1) !important; border-color: rgba(255,94,0,0.18) !important; }
   .srv-tag:nth-child(3) { color: var(--blue-light) !important; }
   .srv-arrow { color: var(--blue) !important; }
+
+  /* Media kit overlay */
+  .mk-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.3s; display: flex; align-items: center; justify-content: center; }
+  .mk-hover-label { background: rgba(0,0,0,0.72); color: #fff; font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1.1rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); opacity: 0; transition: opacity 0.3s; }
 
   /* mk-feats: hover azul */
   .mk-feat:hover { border-color: rgba(26,107,255,0.3) !important; }
@@ -463,12 +533,7 @@
   #quem-somos { background: radial-gradient(ellipse 70% 60% at 70% 50%, rgba(26,107,255,0.08) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(255,94,0,0.06) 0%, transparent 60%), var(--dark) !important; }
   #quem-somos::before { color: rgba(26,107,255,0.03) !important; }
 
-
-  /* Botões de seção (Site, ID Visual) — responsivos */
-  .btn-secao { display: flex; width: 100%; max-width: 100%; justify-content: center; box-sizing: border-box; }
-
   @media (max-width: 1024px) {
-    .hero-visual { display: none; }
     .qs-inner, .id-inner, .mk-inner { grid-template-columns: 1fr; }
     .bio-hero-inner { grid-template-columns: 1fr; }
     .bio-visual { min-height: 320px; }
@@ -478,8 +543,7 @@
   @media (max-width: 768px) {
     .nav-links { display: none; }
     section { overflow-x: hidden; padding: 4rem 5%; }
-    #social-media > div { grid-template-columns: 1fr !important; }
-    #social-media > div > div:last-child { grid-template-columns: 1fr 1fr; }
+    /* social-media: layout controlado por .sm-inner */
     .reveal { overflow-x: hidden; max-width: 100%; box-sizing: border-box; }
     .btn-full { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding-left: 1rem !important; padding-right: 1rem !important; }
     .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--dark); padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
@@ -550,7 +614,6 @@
       white-space: normal !important;
     }
 
-    .mat-br1, .mat-br2 { display: block !important; }
     .mat-btn { order: 3; width: 100%; box-sizing: border-box; }
     .mat-btn .btn-primary { width: 100% !important; box-sizing: border-box !important; justify-content: center; display: flex !important; }
 
@@ -561,13 +624,12 @@
     .hero-sub { font-size: 0.95rem; max-width: 100%; }
     .hero-btns { flex-direction: column; width: 100%; }
     .hero-btns .btn-primary,
-    .hero-btns .btn-secondary { flex: unset; width: 100%; box-sizing: border-box; padding-left: 1rem; padding-right: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .hero-btns .btn-secondary { flex: unset; width: 100%; box-sizing: border-box; padding-left: 1rem; padding-right: 1rem; white-space: nowrap; overflow: visible; font-size: 0.75rem; }
     .hero-stats { width: 100%; box-sizing: border-box; margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; }
     .hero-stat-item { padding: 1rem 0.4rem; }
     .stat-num { font-size: 1.8rem; }
-    .stat-label { font-size: 0.55rem; letter-spacing: 1px; }
+    .stat-label { font-size: 0.55rem; letter-spacing: 1px; white-space: nowrap; }
     .hero-stat-item + .hero-stat-item::before { display: none; }
-    .hero-countries { flex-wrap: wrap; gap: 8px; }
 
     /* ── PROP CARDS ── */
     .prop-cards { grid-template-columns: 1fr; gap: 0.6rem; }
@@ -580,6 +642,7 @@
     .id-text-reorder { width: 100%; text-align: center; }
     .id-texto-top { width: 100%; text-align: center; }
     .id-gallery-reorder { grid-template-columns: repeat(2, 1fr); }
+    .id-gallery-reorder .id-item:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: 50%; margin: 0 auto; }
     .id-btns-wrap { order: unset; display: flex; flex-direction: column; }
 
     /* ── DESIGN REDES: título ── */
@@ -615,18 +678,21 @@
     .qs-badge { bottom: 0.5rem; right: 0.5rem; padding: 1rem; }
     .qs-badge-num { font-size: 1.8rem; }
 
-    /* ── SOCIAL MEDIA: cards entre texto e botão SÓ no mobile ── */
-    #social-media > div { display: flex !important; flex-direction: column; }
-    .sm-texto { display: contents; }
-    .sm-texto-top { order: 1; }
-    .sm-cards { order: 2; grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
-    .sm-btn { order: 3; margin-top: 1.5rem; width: 100%; box-sizing: border-box; }
+    /* ── SOCIAL MEDIA: layout mobile ── */
+    .sm-inner { gap: 1.5rem; }
+    .sm-inner .sm-texto-top .section-title { white-space: normal !important; font-size: clamp(2rem,9vw,3.5rem) !important; }
+    .sm-cards { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+    .sm-card { padding: 1.4rem 1.2rem; gap: 0.4rem; }
+    .sm-card-num { font-size: 1.4rem; }
+    .sm-card-title { font-size: 0.75rem; }
+    .sm-card-desc { font-size: 0.72rem; }
+    .sm-btn { width: 100%; box-sizing: border-box; }
     .sm-btn .btn-primary { width: 100%; box-sizing: border-box; justify-content: center; }
-    /* Cards social media: padding menor e título menor no mobile */
-    .sm-cards .srv-card { padding: 1.2rem 1rem 1rem !important; overflow: visible !important; min-height: 0 !important; height: auto !important; }
-    .sm-cards .srv-title { font-size: 0.72rem !important; letter-spacing: 0.8px !important; margin-bottom: 0.4rem !important; white-space: normal !important; }
-    .sm-cards .srv-desc { font-size: 0.72rem !important; line-height: 1.55 !important; }
+
     .id-btns-wrap { order: 3; display: flex; flex-direction: column; width: 100%; box-sizing: border-box; }
+
+    /* ── BOTÕES: texto centralizado no mobile ── */
+    .btn-primary, .btn-secondary { justify-content: center; text-align: center; }
 
     /* ── BIO SITE: carrossel entre texto e botões SÓ no mobile ── */
     .bio-hero-inner { display: flex; flex-direction: column; }
@@ -654,7 +720,6 @@
       white-space: normal !important;
     }
     .redes-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
-    #social-media > div > div:last-child { grid-template-columns: 1fr; }
     .sm-cards { grid-template-columns: 1fr !important; }
   }
 
@@ -846,13 +911,50 @@
     background: var(--orange-light);
     box-shadow: 0 8px 22px rgba(255,94,0,0.3);
   }
+
+  /* ── ACESSIBILIDADE: respeitar preferência por menos movimento ── */
+  @media (prefers-reduced-motion: reduce) {
+    /* Para todas as animações infinitas */
+    .marquee-track,
+    .redes-carousel-track,
+    .wa-pulse {
+      animation: none !important;
+    }
+
+    /* Para animações de entrada */
+    .hero-title,
+    .hero-sub,
+    .hero-btns,
+    .hero-stats,
+    .wa-btn {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* Para o reveal por scroll */
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    /* Para todas as transitions de transform */
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><img src="imagens/logo-1.png" alt="Amplifying" style="height:30px;width:87px;object-fit:contain;display:block;" loading="eager">AMPLIFYING</a>
+  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><img src="imagens/logo-1.png" alt="Amplifying" style="height:36px;width:auto;object-fit:contain;display:block;" loading="eager">AMPLIFYING</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#criacao-site">Site & Bio Site</a></li>
@@ -861,7 +963,7 @@
     <li><a href="index.html" style="color:var(--orange);">← Tráfego Pago</a></li>
     <li><a href="https://wa.me/5548999897492?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20falar%20com%20a%20equipe!" target="_blank" rel="noopener noreferrer" class="nav-cta">Fale Conosco</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -891,13 +993,13 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat-item"><span class="stat-num">10+</span><span class="stat-label">Projetos</span></div>
-      <div class="hero-stat-item"><span class="stat-num">4</span><span class="stat-label">Países Atendidos</span></div>
+      <div class="hero-stat-item"><span class="stat-num">4</span><span class="stat-label">Países Atendidos</span><div class="stat-flags"><img class="stat-flag" src="https://flagcdn.com/br.svg" alt="Brasil" title="Brasil"><img class="stat-flag" src="https://flagcdn.com/pt.svg" alt="Portugal" title="Portugal"><img class="stat-flag" src="https://flagcdn.com/es.svg" alt="Espanha" title="Espanha"><img class="stat-flag" src="https://flagcdn.com/gb.svg" alt="Inglaterra" title="Inglaterra"></div></div>
       <div class="hero-stat-item"><span class="stat-num">100%</span><span class="stat-label">Personalizado</span></div>
     </div>
     <!-- Crosslink para tráfego pago -->
-    <div style="margin-top:1.5rem;animation:fadeUp 0.8s 0.75s ease both;">
-      <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);text-decoration:none;border:1px solid rgba(255,94,0,0.35);padding:0.55rem 1.1rem;border-radius:4px;transition:all 0.3s;">
-        <span style="width:6px;height:6px;background:var(--orange);border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0;"></span>
+    <div style="margin-top:1.5rem;animation:fadeUp 0.8s 0.75s ease both;width:100%;box-sizing:border-box;">
+      <a href="index.html" style="display:flex;align-items:center;justify-content:center;gap:8px;font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);text-decoration:none;border:1px solid rgba(255,94,0,0.35);padding:0.55rem 1.1rem;border-radius:4px;transition:border-color 0.3s,color 0.3s;width:100%;box-sizing:border-box;text-align:center;line-height:1.4;">
+        <span style="width:6px;height:6px;background:var(--orange);border-radius:50%;animation:dot-pulse 1.5s ease-in-out infinite;flex-shrink:0;"></span>
         Quer trazer mais clientes com Meta Ads & Google Ads? →
       </a>
     </div>
@@ -905,7 +1007,7 @@
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-section">
+<div class="marquee-section" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item">Sites Profissionais<span class="marquee-dot"></span></span>
     <span class="marquee-item">Identidade Visual<span class="marquee-dot"></span></span>
@@ -966,7 +1068,7 @@
       <p class="srv-desc">Gestão estratégica das suas redes sociais para gerar autoridade, alcance e conversão!</p>
       <div class="srv-tags">
         <span class="srv-tag">Instagram</span>
-        <span class="srv-tag">Google Business Profile </span>
+        <span class="srv-tag">Google Business Profile</span>
         <span class="srv-tag">Conteúdo estratégico</span>
       </div>
       <a href="#social-media" class="srv-arrow">Saiba mais →</a>
@@ -1103,48 +1205,43 @@
 
 <!-- SOCIAL MEDIA -->
 <section id="social-media" class="reveal" style="background:var(--dark);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+  <div class="sm-inner">
 
-    <!-- LADO ESQUERDO: texto -->
-    <div class="sm-texto">
-      <div class="sm-texto-top">
-        
-        <h2 class="section-title"><span style="color:var(--orange)">GESTÃO <br>ESTRATÉGICA</span> <br>DAS SUAS <span style="color:var(--white)">REDES!</span></h2>
-        <p class="section-body" style="margin-bottom:2rem;">
-          Presença constante, conteúdo relevante e estratégia validada pro seu nicho. Tudo pra gerar autoridade e atrair mais clientes. Cuidamos das suas redes do início ao fim!
-        </p>
+    <!-- TOPO: título e descrição centralizados -->
+    <div class="sm-texto-top">
+      <h2 class="section-title" style="text-align:center;white-space:nowrap;font-size:clamp(2rem,4.5vw,4.5rem);"><span style="color:var(--orange)">GESTÃO ESTRATÉGICA</span> DAS SUAS <span style="color:var(--white)">REDES!</span></h2>
+      <p class="section-body" style="margin:0 auto 0;text-align:center;max-width:100%;">
+        Presença constante, conteúdo relevante e estratégia validada pro seu nicho. Tudo pra gerar autoridade e atrair mais clientes. Cuidamos das suas redes do início ao fim!
+      </p>
+    </div>
+
+    <!-- MEIO: 4 cards horizontais -->
+    <div class="sm-cards">
+      <div class="sm-card">
+        <span class="sm-card-num">01</span>
+        <h3 class="sm-card-title">Planejamento</h3>
+        <p class="sm-card-desc">Calendário editorial mensal com datas, pautas e formatos já definidos</p>
       </div>
-      <div class="sm-btn">
-        <a href="https://wa.me/5548999897492?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20gest%C3%A3o%20das%20minhas%20redes%20sociais!" target="_blank" rel="noopener noreferrer" class="btn-primary btn-full" style="background:var(--blue);">Quero agora meu Social Media →</a>
+      <div class="sm-card">
+        <span class="sm-card-num">02</span>
+        <h3 class="sm-card-title">Design de Conteúdo</h3>
+        <p class="sm-card-desc">Artes e legendas alinhadas ao seu nicho e identidade visual. Nada genérico</p>
+      </div>
+      <div class="sm-card sm-card--blue">
+        <span class="sm-card-num">03</span>
+        <h3 class="sm-card-title">Publicação & Gestão</h3>
+        <p class="sm-card-desc">Postagens no horário certo, com monitoramento e interação com o público</p>
+      </div>
+      <div class="sm-card sm-card--blue">
+        <span class="sm-card-num">04</span>
+        <h3 class="sm-card-title">Autoridade & Alcance</h3>
+        <p class="sm-card-desc">Crescimento orgânico real, que transforma seguidores em clientes de verdade</p>
       </div>
     </div>
 
-    <!-- LADO DIREITO: 4 cards 2x2 -->
-    <div class="sm-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-      <div class="srv-card" style="cursor:default;">
-        <div class="srv-card-glow"></div>
-        <div class="srv-card-top"></div>
-        <h3 class="srv-title">Planejamento</h3>
-        <p class="srv-desc">Calendário editorial mensal com datas, pautas e formatos já definidos</p>
-      </div>
-      <div class="srv-card" style="cursor:default;">
-        <div class="srv-card-glow"></div>
-        <div class="srv-card-top"></div>
-        <h3 class="srv-title">Design de Conteúdo</h3>
-        <p class="srv-desc">Artes e legendas alinhadas ao seu nicho e identidade visual. Nada genérico</p>
-      </div>
-      <div class="srv-card" style="cursor:default;">
-        <div class="srv-card-glow"></div>
-        <div class="srv-card-top" style="background:linear-gradient(90deg,var(--blue),var(--blue-light));"></div>
-        <h3 class="srv-title">Publicação & Gestão</h3>
-        <p class="srv-desc">Postagens no horário certo, com monitoramento e interação com o público</p>
-      </div>
-      <div class="srv-card" style="cursor:default;">
-        <div class="srv-card-glow"></div>
-        <div class="srv-card-top" style="background:linear-gradient(90deg,var(--blue),var(--blue-light));"></div>
-        <h3 class="srv-title">Autoridade & Alcance</h3>
-        <p class="srv-desc">Crescimento orgânico real, que transforma seguidores em clientes de verdade</p>
-      </div>
+    <!-- BAIXO: botão na largura dos cards -->
+    <div class="sm-btn">
+      <a href="https://wa.me/5548999897492?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20gest%C3%A3o%20das%20minhas%20redes%20sociais!" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background:var(--blue);width:100%;justify-content:center;">Quero agora meu Social Media →</a>
     </div>
 
   </div>
@@ -1233,8 +1330,8 @@
           <video preload="none" autoplay muted loop playsinline>
             <source src="videos/mediakit-1.mp4" type="video/mp4">
           </video>
-          <div style="position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:center;justify-content:center;" class="mk-overlay">
-            <div style="background:rgba(0,0,0,0.72);color:#fff;font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.5rem 1.1rem;border-radius:4px;border:1px solid rgba(255,255,255,0.2);opacity:0;transition:opacity 0.3s;" class="mk-hover-label">Ver na íntegra →</div>
+          <div class="mk-overlay">
+            <div class="mk-hover-label">Ver na íntegra →</div>
           </div>
         </a>
         <!-- Vídeos 2 e 3 — lado a lado -->
@@ -1244,8 +1341,8 @@
             <video preload="none" autoplay muted loop playsinline>
               <source src="videos/mediakit-2.mp4" type="video/mp4">
             </video>
-            <div style="position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:center;justify-content:center;" class="mk-overlay">
-              <div style="background:rgba(0,0,0,0.72);color:#fff;font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.5rem 1.1rem;border-radius:4px;border:1px solid rgba(255,255,255,0.2);opacity:0;transition:opacity 0.3s;" class="mk-hover-label">Ver na íntegra →</div>
+            <div class="mk-overlay">
+              <div class="mk-hover-label">Ver na íntegra →</div>
             </div>
           </a>
           <!-- Paloma (rosa) -->
@@ -1253,8 +1350,8 @@
             <video preload="none" autoplay muted loop playsinline>
               <source src="videos/mediakit-3.mp4" type="video/mp4">
             </video>
-            <div style="position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:center;justify-content:center;" class="mk-overlay">
-              <div style="background:rgba(0,0,0,0.72);color:#fff;font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.5rem 1.1rem;border-radius:4px;border:1px solid rgba(255,255,255,0.2);opacity:0;transition:opacity 0.3s;" class="mk-hover-label">Ver na íntegra →</div>
+            <div class="mk-overlay">
+              <div class="mk-hover-label">Ver na íntegra →</div>
             </div>
           </a>
         </div>
@@ -1476,7 +1573,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="footer-logo" style="display:flex;align-items:center;gap:10px;"><img src="imagens/logo-1.png" alt="Amplifying" style="height:30px;width:87px;object-fit:contain;display:block;" loading="eager">AMPLIFYING</a>
+  <a href="#" class="footer-logo" style="display:flex;align-items:center;gap:10px;"><img src="imagens/logo-1.png" alt="Amplifying" style="height:32px;width:auto;object-fit:contain;display:block;" loading="eager">AMPLIFYING</a>
   <p class="footer-copy">Copyright © 2026 · Todos os Direitos Reservados · Amplifying</p>
   <ul class="footer-links">
     <li><a href="#servicos">Serviços</a></li>
@@ -1497,8 +1594,8 @@
         if (video.readyState === 0) {
           video.load();
         }
-        // Autoplay videos start playing when visible
-        if (video.hasAttribute('autoplay')) {
+        // Autoplay videos start playing when visible (respeitando prefers-reduced-motion)
+        if (video.hasAttribute('autoplay') && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           video.play().catch(() => {});
         }
         lazyVideoObserver.unobserve(video);
@@ -1510,15 +1607,45 @@
     lazyVideoObserver.observe(v);
   });
 
+  // Marquee: pausar no hover (desktop já via CSS) e no toque (mobile)
+  const marqueeSection = document.querySelector('.marquee-section');
+  if (marqueeSection) {
+    marqueeSection.addEventListener('touchstart', () => marqueeSection.classList.add('paused'), { passive: true });
+    marqueeSection.addEventListener('touchend', () => marqueeSection.classList.remove('paused'), { passive: true });
+    marqueeSection.addEventListener('touchcancel', () => marqueeSection.classList.remove('paused'), { passive: true });
+  }
+
+  // Hero video: respeitar prefers-reduced-motion
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.pause();
+    heroVideo.removeAttribute('autoplay');
+  }
+
   // Nav scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Hamburger
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
+  // Hamburger: toggle no clique, fecha ao clicar fora
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
   });
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('open') && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+  // Fecha ao navegar
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
 
   // Reveal on scroll
   const observer = new IntersectionObserver(entries => {
@@ -1528,9 +1655,12 @@
 
   // Mock Slider
   let mockCurrent = 0;
-  const mockTotal = 16;
   const mockTrack = document.getElementById('mockTrack');
   const mockDotsEl = document.getElementById('mockDots');
+  const mockTotal = mockTrack ? mockTrack.querySelectorAll('.mock-slide').length : 0;
+  let mockInterval = null;
+  let mockVisible = false;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Create dots
   for (let i = 0; i < mockTotal; i++) {
@@ -1548,8 +1678,32 @@
 
   function mockSlide(dir) { goToMock(mockCurrent + dir); }
 
-  // Auto-advance every 5 seconds
-  setInterval(() => mockSlide(1), 5000);
+  function startMockAuto() {
+    if (prefersReduced) return;
+    if (mockInterval) return;
+    mockInterval = setInterval(() => mockSlide(1), 5000);
+  }
+
+  function stopMockAuto() {
+    clearInterval(mockInterval);
+    mockInterval = null;
+  }
+
+  // Só avança quando visível; pausa quando fora da tela
+  if (mockTrack) {
+    const mockSection = mockTrack.closest('section') || mockTrack;
+    const mockVisObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        mockVisible = e.isIntersecting;
+        mockVisible ? startMockAuto() : stopMockAuto();
+      });
+    }, { threshold: 0.2 });
+    mockVisObserver.observe(mockSection);
+
+    // Pausa no hover
+    mockTrack.closest('.mock-slider').addEventListener('mouseenter', stopMockAuto);
+    mockTrack.closest('.mock-slider').addEventListener('mouseleave', () => { if (mockVisible) startMockAuto(); });
+  }
 
   // Phone video sliders
   function initPhoneSlider(phoneId, dotsId) {
@@ -1597,11 +1751,12 @@
       });
     });
 
-    // Start first video when it becomes visible
+    // Start first video when it becomes visible (respeitando prefers-reduced-motion)
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const sliderObserver = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          videos[current].play();
+          if (!reducedMotion) videos[current].play().catch(() => {});
           sliderObserver.unobserve(e.target);
         }
       });
@@ -1614,6 +1769,11 @@
   if (document.querySelector('.site-video-card-mobile')) {
     initPhoneSlider('phone-slider-mobile', 'dots-mobile');
   }
+
+  // Modal: fechar com Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.getElementById('modal-site').classList.remove('open');
+  });
 </script>
 
 <!-- WHATSAPP BUTTON -->
@@ -1661,12 +1821,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') document.getElementById('modal-site').classList.remove('open');
-  });
-</script>
 
 <div class="wa-pulse"></div>
 <a class="wa-btn"
